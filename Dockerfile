@@ -17,4 +17,5 @@ ENV NODE_ENV production
 ENV PORT 80
 EXPOSE 80
 
-CMD ["npm", "start"]
+# Run the seeder script after starting the application
+CMD ["sh", "-c", "node seeder.js && npm start"]
