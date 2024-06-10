@@ -32,6 +32,27 @@ db.connect((err) => {
   }
 });
 
+
+
+// Route to fetch and display email column values
+app.get('/emails', (req, res) => {
+  const query = 'SELECT email FROM users';
+
+  db.query(query, (err, results) => {
+    if (err) {
+      console.error('Error fetching data from MySQL:', err);
+      res.status(500).send('Error fetching data');
+      return;
+    }
+
+    // Display the email values
+    const emails = results.map(row => row.email);
+    res.send(emails);
+  });
+});
+
+
+
 const server = app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
 });
