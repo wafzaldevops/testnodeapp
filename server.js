@@ -32,6 +32,10 @@ db.connect((err) => {
   }
 });
 
+app.get('/', (req, res) => {
+  res.send('Welcome to my node application!');
+});
+
 // Route to fetch and display email column values
 app.get('/emails', (req, res) => {
   const query = 'SELECT email FROM users';
