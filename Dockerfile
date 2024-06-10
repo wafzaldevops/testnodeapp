@@ -10,6 +10,9 @@ RUN npm install --production && npm cache clean --force
 
 COPY ./ /usr/src/app
 
+# Copy the seeder script into the container
+COPY seeder.js /usr/src/app/seeder.js
+
 ENV NODE_ENV production
 ENV PORT 80
 EXPOSE 80
