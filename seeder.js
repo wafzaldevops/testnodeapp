@@ -21,11 +21,11 @@ db.connect((err) => {
 const seedData = () => {
   // Define your seed data and SQL queries here
   const users = [
-    { email: 'user1@example.com' },
-    { email: 'user2@example.com' },
-    // Add more users as needed
+    { name: 'User 1', email: 'user1@example.com' },
+    { name: 'User 2', email: 'user2@example.com' },
   ];
-
+  
+    
   // Example SQL query to insert users
   const insertQuery = `
     INSERT INTO users (email)
