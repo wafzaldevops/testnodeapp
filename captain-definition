@@ -1,5 +1,6 @@
 {
- "schemaVersion" :2 ,
- "templateId" :"node/20.12.0"
+    "schemaVersion": 2,
+    "dockerfilePath": "./Dockerfile",
+    "captainVersion": "1.0"
 }
 
