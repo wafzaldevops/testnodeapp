@@ -32,8 +32,6 @@ db.connect((err) => {
   }
 });
 
-
-
 // Route to fetch and display email column values
 app.get('/emails', (req, res) => {
   const query = 'SELECT email FROM users';
@@ -50,8 +48,6 @@ app.get('/emails', (req, res) => {
     res.send(emails);
   });
 });
-
-
 
 const server = app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
