@@ -5,10 +5,10 @@ const mysql = require('mysql');
 const path = require('path');
 const app = express();
 require('dotenv').config();
-const host = process.env.HOST
-const user = process.env.USER
-const password = process.env.PASSWORD
-const database = process.env.DATABASE
+const host = process.env.DB_HOST
+const user = process.env.DB_USER
+const password = process.env.DB_PASSWORD
+const database = process.env.DB_NAME
 
 const { getHomePage } = require('./routes/index');
 const { addPlayerPage, addPlayer, deletePlayer, editPlayer, editPlayerPage } = require('./routes/player');
