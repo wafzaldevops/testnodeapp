@@ -33,7 +33,7 @@ db.connect((err) => {
 });
 
 app.get('/', (req, res) => {
-  res.send('Welcome to my node application!');
+  res.send('Welcome to my node application with database, it is working fine!');
 });
 
 // Route to fetch and display email column values
